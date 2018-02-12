@@ -4,6 +4,7 @@ import java.util.*;
 
 public class TuneParser
 {
+    ArrayList<Tune> tunes = new ArrayList<Tune>();
 
     public String toString()
     {
@@ -14,7 +15,19 @@ public class TuneParser
         }
         return sb.toString();
     }
-    ArrayList<Tune> tunes = new ArrayList<Tune>();
+
+    public Tune findTune(String title)
+    {
+        for(Tune t:tunes)
+        {
+            if (t.getTitle().contains(title))
+            {
+                return t;
+            }
+        }
+        return null;
+    }
+    
     public TuneParser(String fileName)
     {
         BufferedReader inputStream = null;
@@ -24,14 +37,39 @@ public class TuneParser
             
             String l;
             Tune tune = null;
+            String notation = "";
             while ((l = inputStream.readLine()) != null) 
             {
                 if (l.startsWith("X:"))
                 {
-                    Tune tune = new Tune();
+                    tune = new Tune();
                     tunes.add(tune);
-                    tune.setX(Integer.parseInt(l.substring(3)));
+                    tune.setX(Integer.parseInt(l.substring(2)));
                 }
+                if (l.startsWith("T:"))
+                {
+                    if (tune.getTitle() == null)
+                    {
+                        tune.setTitle(l.substring(2));
+                    }
+                    else if (tune.getAltTitle() == null)
+                    {
+                        tune.setAltTitle(l.substring(2));
+                    }                    
+                }
+                if (tune!= null)
+                {
+                    if (l.equals(""))
+                    {
+                        tune.setNotation(notation);
+                        notation = "";
+                    }
+                    else
+                    {
+                        notation += l + "\n";
+                    }                    
+                }
+                
             }
         }
         catch (IOException e)
@@ -56,5 +94,9 @@ public class TuneParser
     public static void main(String[] args)
     {
         TuneParser tp = new TuneParser("hnj0.abc");
+        System.out.println(tp);
+
+        Tune t = tp.findTune("Scotsman over the Border");
+        t.play();
     }
 }

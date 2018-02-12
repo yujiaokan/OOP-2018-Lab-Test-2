@@ -1,13 +1,17 @@
 package ie.dit;
 
 
-public class Tune 
+public class Tune implements Playable
 {
     private String title;
     private String altTitle;
     private String notation;
     private int x;
 
+    public void play()
+    {
+        System.err.println(notation);
+    }
 
     public int getX()
     {
@@ -44,15 +48,15 @@ public class Tune
         return altTitle;
     }
 
-    public void setAltTitle(String title)
+    public void setAltTitle(String altTitle)
     {
         this.altTitle  = altTitle;
     }
 
     public String toString()
     {
-        return "" + x + ", " + title 
-            + altTitle != null ? ", " + altTitle : "";
+        return "" + x + ", " + title + 
+            (altTitle != null ? ", " + altTitle : "");
     }
     
 }
