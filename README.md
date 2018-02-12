@@ -78,3 +78,40 @@ Instructions:
         t.play();
     }
 ```
+
+Below is sample of what your program should output:
+
+1, Bride's Favourite, The
+2, Irish Washerwoman, The
+3, Banish Misfortune
+4, Piper's Chair, The, Cathaoir an Ph\'iob\'aire
+5, Scotsman over the Border, The
+... 
+(lines omitted)
+...
+97, O'Broin's Flightcase
+98, Wheels of the World, The
+99, Peter O'Byrne's Fancy, Peter Byrne's Fancy
+100, Humours of Drinagh, The
+
+X:5
+T:Scotsman over the Border, The
+R:jig
+H:Related to The Carraroe Jig, #181
+D:Music at Matt Molloy's.
+D:Noel Hill & Tony Linnane.
+D:Molloy, Peoples, Brady.
+Z:id:hn-jig-5
+M:6/8
+K:D
+DED FDF | AFA d2A | ~B3 BAB | dgf edB |
+ADD FDF | AFA d2A | ~B3 AFA | dAF ~E3 :|
+|: dfa afa | bag fef | dfa afe | def edB |
+dfa afa | bag fed | B2B AFA | dAF ~E3 :|
+P:variations
+|: ~D3 FDF | AFA d2A | ~B3 BAB | def edB |
+ADD ~F3 | AFA d2A | BdB AFA |1 dAF EFE :|2 dAF EFA ||
+|: dfa afa | bag fge | dfa afe | def edB |
+dfa af/g/a | bag fge | d2B AFA |1 dAF EFA :|2 dAF EFE ||
+
+Commit your code whenevr you get something completed. Submit the URL to your git repository here.
