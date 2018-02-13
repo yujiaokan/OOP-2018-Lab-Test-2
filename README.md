@@ -54,8 +54,8 @@ Instructions:
     3, Banish Misfortune
     4, Piper's Chair, The, Cathaoir an Ph\'iob\'aire
 ```
-- Write a class called ```TuneBook``` that has a field called tunes of type ```ArrayList``` of ```Tune``` objects. To use an ```ArrayList```, you should type ```import java.util.ArrayList;``` at the top of your Java file.
-- Write a constructor for the ```TuneBook``` class that takes a single ```String``` as a parameter representing the name of the abc file to load. Write the code in this constructor that loads the file line by line and populates the tunes ```ArrayList``` from the contents of the ABC file. There should be one ```Tune``` object in the ArrayList for every tune in the file and you should set the ```x```, ```title``` and ```altTitle``` fields on each ```Tune``` object from the tune headers in each tune from the file. You can use the accessor methods for this. ```title``` should be set from the first T header in each tune and the ```altTitle``` field should be set from the second T header if one exists. If a tune has only one T header, then the ```altTitle``` field of the tune should be null. If there are more than two titles for a tune (more than two T headers), then you can ignore the third and subsequent titles.
+- Write a class called ```TuneBook``` that has a field called ```tunes``` of type ```ArrayList``` of ```Tune``` objects. To use an ```ArrayList```, you should type ```import java.util.ArrayList;``` at the top of your Java file.
+- Write a constructor for the ```TuneBook``` class that takes a single ```String``` as a parameter representing the name of the abc file to load. Write the code in this constructor that loads the file line by line and populates the tunes ```ArrayList``` from the contents of the ABC file. There should be one ```Tune``` object in the ```ArrayList``` for each tune in the file and you should set the ```x```, ```title``` and ```altTitle``` fields on each ```Tune``` object from the tune headers in each tune from the file. You can use the accessor methods for this. ```title``` should be set from the first T header in each tune and the ```altTitle``` field should be set from the second T header if one exists. If a tune has only one T header, then the ```altTitle``` field of the tune should be null. If there are more than two titles for a tune (more than two T headers), then you can ignore the third and subsequent titles.
 
     Here is some example code that loads and prints a text file you can use to get started writing this method. Also fee free to have a look at the code from Monday's class
 
@@ -89,7 +89,7 @@ Instructions:
     }    
     ```
 - Write a ```toString``` method on the ```TuneBook``` class that returns a ```String``` version of the tunes ```ArrayList```, with each element of the ```ArrayList``` on a seperate line in the returned ```String```.
-- Write a method ```public Tune findTune(String title)``` on the ```TuneBook``` class that returns the first matching ```Tune``` from the ArrayList that contains the parameter ```title``` in the  ```title```.
+- Write a method ```public Tune findTune(String title)``` on the ```TuneBook``` class that returns the first matching ```Tune``` from the ArrayList that contains the parameter ```title``` in the  title of the tune.
 - Create an ```interface``` called ```Player``` that has one method called ```void play()```
 - Implement the interface on the ```Tune``` class. The play method should just print the notation for the tune to the console.
 - Put a ```main``` method on the ```TuneBook``` class that has the following code on it to test your solution:
@@ -148,10 +148,11 @@ Marking Scheme
 | Description | Marks |
 |-------------|-------|
 | Writing the ```Tune``` class, with private fields & public accessors | 10 marks |
-| ```toString``` method on the tune class | 10 marks |
+| ```toString``` method on the ```Tune``` class | 10 marks |
 | ```TuneBook``` class with an ```ArrayList``` of Tune objects | 10 marks |
 | Loading tunes into the ```ArrayList``` | 30 marks |
 | ```toString``` method on the TuneBook | 10 marks |
-| Writing and implementing the interface | 20 marks |
+| Writing the ```findTune``` method | 10 marks |
+| Writing and implementing the interface | 10 marks |
 | Correct use of git | 10 marks |
 
