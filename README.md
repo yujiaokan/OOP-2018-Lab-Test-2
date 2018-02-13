@@ -50,10 +50,10 @@ Instructions:
 - Create a class called ```Tune``` in the package ie.dit with private fields for ```x```, ```title``` and ```altTitle```. ```x``` should be of type ```int``` and ```title``` and ```altTitle``` should be ```String```s. Create public accessor methods for these private fields.
 - Write a ```toString``` method on the ```Tune``` class. This should return the fields formatted as "x, title, altTitle". If the tune does not have an ```altTitle```, then you should leave this part out. For example, the above tunes would be printed as:
 
+```
     3, Banish Misfortune
-
     4, Piper's Chair, The, Cathaoir an Ph\'iob\'aire
-
+```
 - Write a class called ```TuneBook``` that has a field called tunes of type ```ArrayList``` of ```Tune``` objects. To use an ```ArrayList```, you should type ```import java.util.ArrayList;``` at the top of your Java file.
 - Write a constructor for the ```TuneBook``` class that takes a single ```String``` as a parameter representing the name of the abc file to load. Write the code in this constructor that loads the file line by line and populates the tunes ```ArrayList``` from the contents of the ABC file. There should be one ```Tune``` object in the ArrayList for every tune in the file and you should set the ```x```, ```title``` and ```altTitle``` fields on each ```Tune``` object from the tune headers in each tune from the file. You can use the accessor methods for this. ```title``` should be set from the first T header in each tune and the ```altTitle``` field should be set from the second T header if one exists. If a tune has only one T header, then the ```altTitle``` field of the tune should be null. If there are more than two titles for a tune (more than two T headers), then you can ignore the third and subsequent titles.
 
