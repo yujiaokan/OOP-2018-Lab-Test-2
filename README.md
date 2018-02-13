@@ -92,7 +92,7 @@ Instructions:
 - Write a method ```public Tune findTune(String title)``` on the ```TuneBook``` class that returns the first matching ```Tune``` from the ArrayList that contains the parameter ```title``` in the  title of the tune.
 - Create an ```interface``` called ```Player``` that has one method called ```void play()```
 - Implement the interface on the ```Tune``` class. The play method should just print the notation for the tune to the console.
-- Put a ```main``` method on the ```TuneBook``` class that has the following code on it to test your solution:
+- Put a ```main``` method on the ```TuneBook``` class that has the following code on it to test your solution. It's best to test your code as you go along and don't wait until you have all the parts completed before compiling and running your code.
 
 ```Java
     public static void main(String[] args)
