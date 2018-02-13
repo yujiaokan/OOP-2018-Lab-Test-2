@@ -47,7 +47,7 @@ Instructions:
 - Create a new Java git repository on github and call it JavaTest. Make sure you specify Java as the language on github so you get a Java .gitignore file
 - Clone the repository to your computer
 - Create the folder structure for a java package in the project you cloned, called ```ie.dit``` and download [this abc file](https://raw.githubusercontent.com/skooter500/OOP-2017-2018/master/java/hnj0.abc) to the root of the folder structure you created.
-- Create a class called ```Tune``` in the package ie.dit with private fields for ```x```, ```title``` and ```altTitle```. ```x``` should be of type ```int``` and ```title``` and ```altTitle``` should be ```String```s. Create public accessor methods for these private fields.
+- Create a class called ```Tune``` in the package ie.dit with private fields for ```x```, ```title```, ```altTitle``` and ```notation```. ```x``` should be of type ```int```, ```title```, ```altTitle``` and ```notation``` should be ```String```s. Create public accessor methods for these private fields.
 - Write a ```toString``` method on the ```Tune``` class. This should return the fields formatted as "x, title, altTitle". If the tune does not have an ```altTitle```, then you should leave this part out. For example, the above tunes would be printed as:
 
 ```
@@ -55,7 +55,7 @@ Instructions:
     4, Piper's Chair, The, Cathaoir an Ph\'iob\'aire
 ```
 - Write a class called ```TuneBook``` that has a field called ```tunes``` of type ```ArrayList``` of ```Tune``` objects. To use an ```ArrayList```, you should type ```import java.util.ArrayList;``` at the top of your Java file.
-- Write a constructor for the ```TuneBook``` class that takes a single ```String``` as a parameter representing the name of the abc file to load. Write the code in this constructor that loads the file line by line and populates the tunes ```ArrayList``` from the contents of the ABC file. There should be one ```Tune``` object in the ```ArrayList``` for each tune in the file and you should set the ```x```, ```title``` and ```altTitle``` fields on each ```Tune``` object from the tune headers in each tune from the file. You can use the accessor methods for this. ```title``` should be set from the first T header in each tune and the ```altTitle``` field should be set from the second T header if one exists. If a tune has only one T header, then the ```altTitle``` field of the tune should be null. If there are more than two titles for a tune (more than two T headers), then you can ignore the third and subsequent titles.
+- Write a constructor for the ```TuneBook``` class that takes a single ```String``` as a parameter representing the name of the abc file to load. Write the code in this constructor that loads the file line by line and populates the tunes ```ArrayList``` from the contents of the ABC file. There should be one ```Tune``` object in the ```ArrayList``` for each tune in the file and you should set the ```x```, ```title```, ```altTitle``` and ```notation``` fields on each ```Tune``` object from the file. You can use the accessor methods for this. ```title``` should be set from the first T header in each tune and the ```altTitle``` field should be set from the second T header if one exists. If a tune has only one T header, then the ```altTitle``` field of the tune should be null. If there are more than two titles for a tune (more than two T headers), then you can ignore the third and subsequent titles. ```notation``` should contain the full tune including the headers and the music notes.
 
     Here is some example code that loads and prints a text file you can use to get started writing this method. Also fee free to have a look at the code from Monday's class
 
@@ -147,10 +147,10 @@ Commit your code whenever you get something completed. [Submit the URL to your g
 
 | Description | Marks |
 |-------------|-------|
-| Writing the ```Tune``` class, with private fields & public accessors | 10 marks |
+| Writing the ```Tune``` class, with private fields & public accessors | 15 marks |
 | ```toString``` method on the ```Tune``` class | 10 marks |
 | ```TuneBook``` class with an ```ArrayList``` of Tune objects | 10 marks |
-| Loading tunes into the ```ArrayList``` | 30 marks |
+| Loading tunes into the ```ArrayList``` | 25 marks |
 | ```toString``` method on the TuneBook | 10 marks |
 | Writing the ```findTune``` method | 10 marks |
 | Writing and implementing the interface | 10 marks |
