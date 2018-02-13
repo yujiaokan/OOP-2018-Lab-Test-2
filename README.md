@@ -46,7 +46,7 @@ Instructions:
 
 - Create a new Java git repository on github and call it JavaTest. Make sure you specify Java as the language on github so you get a Java .gitignore file
 - Clone the repository to your computer
-- Create the folder structure for a java package in the project you cloned, called ```ie.dit``` and download this abc file to the root of the folder structure you created.
+- Create the folder structure for a java package in the project you cloned, called ```ie.dit``` and download [this abc file](https://raw.githubusercontent.com/skooter500/OOP-2017-2018/master/java/hnj0.abc) to the root of the folder structure you created.
 - Create a class called ```Tune``` in the package ie.dit with private fields for ```x```, ```title``` and ```altTitle```. ```x``` should be of type ```int``` and ```title``` and ```altTitle``` should be ```String```s. Create public accessor methods for these private fields.
 - Write a ```toString``` method on the ```Tune``` class. This should return the fields formatted as "x, title, altTitle". If the tune does not have an ```altTitle```, then you should leave this part out. For example, the above tunes would be printed as:
 
