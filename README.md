@@ -46,7 +46,7 @@ Instructions:
 
 - Create a new Java git repository on github and call it JavaTest. Make sure you specify Java as the language on github so you get a Java .gitignore file
 - Clone the repository to your computer
-- Create the folder structure for a java package in the project you cloned, called ie.dit and download this abc file to the root of the folder structure you created.
+- Create the folder structure for a java package in the project you cloned, called ```ie.dit``` and download this abc file to the root of the folder structure you created.
 - Create a class called ```Tune``` in the package ie.dit with private fields for ```x```, ```title``` and ```altTitle```. ```x``` should be of type ```int``` and ```title``` and ```altTitle``` should be ```String```s. Create public accessor methods for these private fields.
 - Write a ```toString``` method on the ```Tune``` class. This should return the fields formatted as "x, title, altTitle". If the tune does not have an ```altTitle```, then you should leave this part out. For example, the above tunes would be printed as:
 
@@ -143,7 +143,7 @@ dfa af/g/a | bag fge | d2B AFA |1 dAF EFA :|2 dAF EFE ||
 ```
 Commit your code whenever you get something completed. [Submit the URL to your git repository here](https://docs.google.com/forms/d/e/1FAIpQLSdOQy53BL3zvBzlY7pSxzWRqOb-J4NatLuOnEzHkFjeHZAi_Q/viewform).
 
-Marking Scheme
+## Marking Scheme
 
 | Description | Marks |
 |-------------|-------|
